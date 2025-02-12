@@ -35,5 +35,4 @@ async def chatbot(client, message: Message):
     reply = await fetch_response(message.text)
     await message.reply_text(reply or "ChatBot Error, Something went wrong. Contact @AsuraaSupports.")
 
-
 # ⭐ 𝐂𝐫𝐞𝐝𝐢𝐭𝐬: @CodeSearchDev ✦ @AshokShau

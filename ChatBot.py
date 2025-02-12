@@ -6,7 +6,6 @@ from pyrogram.types import Message
 
 from config import app
 
-
 async def fetch_response(query):
     url = f"https://codesearchdevapi.vercel.app/chat?query={query}"
     async with aiohttp.ClientSession() as session:

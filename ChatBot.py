@@ -27,7 +27,7 @@ async def text_filter(_, __, m: Message):
 
 chatbot_filter = filters.create(text_filter)
 
-@app.on_message(chatbot_filter)
+@app.on_message((filters.text & filters.group & chatbot_filter) | filters.mentioned)
 async def chatbot(client, message: Message):
     chat_id = message.chat.id
     await client.send_chat_action(chat_id, ChatAction.TYPING) 
@@ -35,4 +35,4 @@ async def chatbot(client, message: Message):
     reply = await fetch_response(message.text)
     await message.reply_text(reply or "ChatBot Error, Something went wrong. Contact @AsuraaSupports.")
 
-# ⭐ 𝐂𝐫𝐞𝐝𝐢𝐭𝐬: @CodeSearchDev ✦ @AshokShau
+# ⭐ 𝐂𝐫𝐞𝐝𝐢𝐭𝐬: @CodeSearchDev

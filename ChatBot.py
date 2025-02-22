@@ -33,6 +33,6 @@ async def chatbot(client, message: Message):
     await client.send_chat_action(chat_id, ChatAction.TYPING) 
 
     reply = await fetch_response(message.text)
-    await message.reply_text(reply or "ChatBot Error, Something went wrong. Contact @AsuraaSupports.")
+    await message.reply_text(reply or "ChatBot Error, Something went wrong. Contact @introvertt_i .")
 
-# ⭐ 𝐂𝐫𝐞𝐝𝐢𝐭𝐬: @CodeSearchDev
+# ⭐ 𝐂𝐫𝐞𝐝𝐢𝐭𝐬: @introvertt_i
